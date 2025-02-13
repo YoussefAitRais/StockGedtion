@@ -97,10 +97,6 @@
 
 </div>
 
-<!-- Footer -->
-<footer class="py-6 text-center text-gray-400">
-    &copy; 2025 GestionProduits. Tous droits réservés.
-</footer>
 
 <script>
     document.getElementById("productForm").addEventListener("submit", (event) => {
