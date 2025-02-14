@@ -33,6 +33,9 @@ public class Product {
 
     }
 
+    public Product(int id, String name, String description, int quantity, double prixUnitaire, String category) {
+    }
+
     public int getId() {
         return id;
     }

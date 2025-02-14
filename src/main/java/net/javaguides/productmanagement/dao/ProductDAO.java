@@ -40,15 +40,15 @@ public class ProductDAO {
         List<Product> products = new ArrayList<>();
         try (Connection connection = getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_PRODUCTS);
-             ResultSet rs = preparedStatement.executeQuery()) {
+             ResultSet result = preparedStatement.executeQuery()) {
 
-            while (rs.next()) {
-                int id = rs.getInt("id");
-                String name = rs.getString("productName");
-                String description = rs.getString("description");
-                int quantity = rs.getInt("quantity");
-                double price = rs.getDouble("prixUnitaire");
-                String category = rs.getString("category");
+            while (result.next()) {
+                int id = result.getInt("id");
+                String name = result.getString("productName");
+                String description = result.getString("description");
+                int quantity = result.getInt("quantity");
+                double prixUnitaire = result.getDouble("prixUnitaire");
+                String category = result.getString("category");
 
                 products.add(new Product(id, name, description, quantity, prixUnitaire, category));
             }
