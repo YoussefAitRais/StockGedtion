@@ -1,41 +1,37 @@
 package net.javaguides.productmanagement.model;
 
-
-
 public class Product {
-    protected int id;
-    protected String productNAme;
-    protected String description;
-    protected String quantity;
-    protected String prixUnitaire;
-    protected String category;
+    private int id;
+    private String productName;
+    private String description;
+    private int quantity;
+    private double prixUnitaire;
+    private String category;
 
+    // Default Constructor
     public Product() {
     }
 
-    public Product(String productNAme, String description, String quantity, String prix_unitaire, String category) {
-        super();
-        this.productNAme = productNAme;
+    // Constructor for adding new products (without ID)
+    public Product(String productName, String description, int quantity, double prixUnitaire, String category) {
+        this.productName = productName;
         this.description = description;
         this.quantity = quantity;
-        this.prixUnitaire = prix_unitaire;
+        this.prixUnitaire = prixUnitaire;
         this.category = category;
-
     }
 
-    public Product(int id, String productNAme, String description, String quantity, String prix_unitaire, String category) {
-        super();
-        this.productNAme = productNAme;
+    // Constructor for existing products (with ID)
+    public Product(int id, String productName, String description, int quantity, double prixUnitaire, String category) {
+        this.id = id;
+        this.productName = productName;
         this.description = description;
         this.quantity = quantity;
-        this.prixUnitaire = prix_unitaire;
+        this.prixUnitaire = prixUnitaire;
         this.category = category;
-
     }
 
-    public Product(int id, String name, String description, int quantity, double prixUnitaire, String category) {
-    }
-
+    // Getters and Setters
     public int getId() {
         return id;
     }
@@ -44,12 +40,12 @@ public class Product {
         this.id = id;
     }
 
-    public String getName() {
-        return productNAme;
+    public String getProductName() {
+        return productName;
     }
 
-    public void setName(String name) {
-        this.productNAme = productNAme;
+    public void setProductName(String productName) {
+        this.productName = productName;
     }
 
     public String getDescription() {
@@ -60,22 +56,20 @@ public class Product {
         this.description = description;
     }
 
-
-    public String getQuantity(String quantity) {
+    public int getQuantity() {
         return quantity;
     }
 
-    public void setQuantiy(String quantity) {
+    public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
 
-    public String getPrixUnitaire() {
+    public double getPrixUnitaire() {
         return prixUnitaire;
     }
 
-    public void setPrixUnitaire(String prix_unitaire) {
-        this.prixUnitaire = prix_unitaire;
-
+    public void setPrixUnitaire(double prixUnitaire) {
+        this.prixUnitaire = prixUnitaire;
     }
 
     public String getCategory() {
@@ -86,6 +80,3 @@ public class Product {
         this.category = category;
     }
 }
-
-
-
