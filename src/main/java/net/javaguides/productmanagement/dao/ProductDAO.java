@@ -16,9 +16,6 @@ public class ProductDAO  {
         Connection conn = null;
         Statement stmt = null;
 
-        try {
-
-        }
 
 
 

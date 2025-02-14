@@ -46,7 +46,7 @@ public class Product {
     }
 
     public void setName(String name) {
-        this.productNAme = productNAme
+        this.productNAme = productNAme;
     }
 
     public String getDescription() {
