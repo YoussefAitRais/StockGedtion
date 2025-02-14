@@ -7,7 +7,7 @@ public class Product {
     protected String productNAme;
     protected String description;
     protected String quantity;
-    protected String prix_unitaire;
+    protected String prixUnitaire;
     protected String category;
 
     public Product() {}
@@ -17,7 +17,7 @@ public class Product {
         this.productNAme  = productNAme;
         this.description = description;
         this.quantity = quantity;
-        this.prix_unitaire = prix_unitaire;
+        this.prixUnitaire = prix_unitaire;
         this.category = category;
 
-    };
+    }
